@@ -1,0 +1,134 @@
+//@charset "UTF-8";
+// Fonts
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+//@import "modal";
+@import "variables";
+
+@import "scrollbar";
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import '~sweetalert2/dist/sweetalert2.min.css';
+
+@import "~vue-select/src/scss/vue-select";
+
+
+
+.select2-container .select2-selection--single {
+  height: 50px !important;
+  padding: 2px;
+}
+
+.vs__search {
+  padding: 2px !important;
+}
+
+.form-control-feedback {
+  color: red;
+}
+
+
+.select2-container .select2-selection--single {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  /* height: 28px; */
+  user-select: none;
+  /* -webkit-user-select: none; */
+}
+
+h4 {
+  line-height: 22px;
+  font-size: 18px;
+}
+
+.the-legend {
+  border-style: none;
+  border-width: 0;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 0;
+  width: auto;
+  padding: 0 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.the-fieldset {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.sidebar-nav > ul > li > a.active {
+  //background: #ffffff !important;
+}
+
+.pagination {
+  margin: 0;
+  float: right;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.pagination a.page {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-right: 2px;
+}
+
+.pagination a.page.active {
+  color: white;
+  background-color: #337ab7;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-right: 2px;
+}
+
+.pagination a.btn-nav {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 5px 7px;
+  margin-right: 2px;
+}
+
+.pagination a.btn-nav.disabled {
+  color: lightgray;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 5px 7px;
+  margin-right: 2px;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  float: left;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+body {
+  position: fixed;
+}
+
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+
+
+.sidebar-nav{
+  ul{
+    li{
+      a.active{
+        background: #ebf3f5 !important;
+      }
+    }
+  }
+}

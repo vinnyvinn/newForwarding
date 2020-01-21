@@ -1,0 +1,53 @@
+@extends('layouts.main')
+@section('content')
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Edit Stage</h4>
+                        <form class="form-material m-t-40" action="{{ route('stages.update', $stage->id) }}"
+                              method="post">
+                            {{ csrf_field() }}
+                            {{ method_field('PUT') }}
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" required id="name" value="{{ $stage->name }}" name="name"
+                                               class="form-control" placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="type">Transport Type</label>
+                                        <select name="type" required id="type" class="form-control">
+                                            <option value="">Select Transport Type</option>
+                                            <option {{ $stage->type == \Esl\helpers\Constants::TRANSPORT_TYPE_IMPORT ? 'selected' : '' }} value="{{ \Esl\helpers\Constants::TRANSPORT_TYPE_IMPORT }}">
+                                                Import
+                                            </option>
+                                            <option {{ $stage->type == \Esl\helpers\Constants::TRANSPORT_TYPE_EXPORT ? 'selected' : '' }}  value="{{ \Esl\helpers\Constants::TRANSPORT_TYPE_EXPORT }}">
+                                                Export
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <input type="text" required id="description" value="{{ $stage->description }}"
+                                               name="description" class="form-control" placeholder="Description">
+                                    </div>
+                                    <div class="form-group">
+                                        <br>
+                                        <input class="btn btn-block btn-primary" type="submit" value="Save">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+

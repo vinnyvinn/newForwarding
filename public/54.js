@@ -1,0 +1,691 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[54],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuetable_2_src_components_Vuetable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuetable-2/src/components/Vuetable */ "./node_modules/vuetable-2/src/components/Vuetable.vue");
+/* harmony import */ var vuetable_2_src_components_VuetablePagination__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuetable-2/src/components/VuetablePagination */ "./node_modules/vuetable-2/src/components/VuetablePagination.vue");
+/* harmony import */ var vuetable_2_src_components_VuetablePaginationInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuetable-2/src/components/VuetablePaginationInfo */ "./node_modules/vuetable-2/src/components/VuetablePaginationInfo.vue");
+/* harmony import */ var _mixins_vuetable_2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixins/vuetable-2 */ "./resources/assets/js/mixins/vuetable-2.js");
+/* harmony import */ var _mixins_table_mixins_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixins/table-mixins-actions */ "./resources/assets/js/mixins/table-mixins-actions.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixins_vuetable_2__WEBPACK_IMPORTED_MODULE_3__["default"], _mixins_table_mixins_actions__WEBPACK_IMPORTED_MODULE_4__["default"]],
+  components: {
+    Vuetable: vuetable_2_src_components_Vuetable__WEBPACK_IMPORTED_MODULE_0__["default"],
+    VuetablePagination: vuetable_2_src_components_VuetablePagination__WEBPACK_IMPORTED_MODULE_1__["default"],
+    VuetablePaginationInfo: vuetable_2_src_components_VuetablePaginationInfo__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  data: function data() {
+    return {
+      fields: [{
+        title: '#',
+        name: '__sequence'
+      }, {
+        name: 'shipment_type_name',
+        title: 'Shipment type',
+        sortField: 'shipment_types.name',
+        titleClass: 'sorting'
+      }, {
+        name: 'shipment_sub_type_name',
+        title: 'Shipment sub type',
+        sortField: 'shipment_sub_types.name',
+        titleClass: 'sorting'
+      }, {
+        name: '__component:show-job-workflow-stage',
+        title: 'Stage',
+        sortField: 'stages.name',
+        titleClass: 'sorting'
+      }, {
+        name: '__component:workflow-stage-required-documents',
+        title: 'Required Docs',
+        sortField: 'stages.name',
+        titleClass: 'sorting'
+      }, {
+        title: 'created at',
+        name: 'created_at',
+        sortField: 'created_at',
+        titleClass: 'sorting'
+      }, {
+        name: '__slot:actions',
+        title: 'Actions',
+        dataClass: 'text-center',
+        titleClass: 'text-center'
+      }],
+      sortOrder: [{
+        field: 'created_at',
+        sortField: 'created_at',
+        direction: 'desc'
+      }],
+      moreParams: {
+        status: 1
+      },
+      customPagination: {},
+      showAddShipment: false
+    };
+  },
+  methods: {
+    onCellClicked: function onCellClicked(data, field, event) {
+      console.log('cellClicked: ', field.name);
+      this.$refs.vuetable.toggleDetailRow(data.id);
+    },
+    addShipment: function addShipment() {
+      this.showModal(true);
+    },
+    deleteShipment: function deleteShipment(id) {
+      var url = "/api/jobWorkflowProcesses/" + id;
+      this.deleteRecord(url);
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=template&id=52f952bc&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=template&id=52f952bc& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-lg-12" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "row card-title" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-4 " },
+              [_c("add-job-processing-workflow")],
+              1
+            ),
+            _vm._v(" "),
+            _c("h4", { staticClass: "col-md-4  text-center" }, [
+              _vm._v("Job Workflow")
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-md-4 " },
+              [
+                _c("custom-pagination-info", {
+                  ref: "pagination",
+                  attrs: {
+                    customPagination: _vm.customPagination,
+                    css: _vm.css.pagination
+                  },
+                  on: { "vuetable-pagination:change-page": _vm.onChangePage }
+                })
+              ],
+              1
+            )
+          ]),
+          _vm._v(" "),
+          _c("hr", { staticClass: "mb-0 mt-0" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card card-body " },
+            [
+              _c("simple-spiner"),
+              _vm._v(" "),
+              _c("filter-bar", { attrs: { placeholder: "Name" } }),
+              _vm._v(" "),
+              _c("vuetable", {
+                ref: "vuetable",
+                attrs: {
+                  "api-url": "/api/jobWorkflowProcesses",
+                  fields: _vm.fields,
+                  "pagination-path": "",
+                  css: _vm.css.table,
+                  "sort-order": _vm.sortOrder,
+                  "multi-sort": true,
+                  "append-params": _vm.moreParams
+                },
+                on: {
+                  "vuetable:cell-clicked": _vm.onCellClicked,
+                  "vuetable:pagination-data": _vm.onPaginationData,
+                  "vuetable:loading": _vm.loading,
+                  "vuetable:load-success": _vm.loaded,
+                  "vuetable:load-error": _vm.loadError
+                },
+                scopedSlots: _vm._u([
+                  {
+                    key: "actions",
+                    fn: function(props) {
+                      return [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-sm btn-danger",
+                            attrs: { type: "submit" },
+                            on: {
+                              click: function($event) {
+                                return _vm.deleteShipment(props.rowData.id)
+                              }
+                            }
+                          },
+                          [_c("i", { staticClass: "fa fa-trash" })]
+                        )
+                      ]
+                    }
+                  }
+                ])
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "vuetable-pagination" },
+                [
+                  _c("vuetable-pagination-info", {
+                    ref: "paginationInfo",
+                    attrs: { "info-class": "pagination-info" }
+                  }),
+                  _vm._v(" "),
+                  _c("vuetable-pagination", {
+                    ref: "pagination",
+                    attrs: { css: _vm.css.pagination },
+                    on: { "vuetable-pagination:change-page": _vm.onChangePage }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/mixins/alert-mixins.js":
+/*!****************************************************!*\
+  !*** ./resources/assets/js/mixins/alert-mixins.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var alertMixins = {
+  methods: {
+    deleteAlert: function deleteAlert() {
+      var _this = this;
+
+      this.$swal({
+        type: 'warning',
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(function (result) {
+        if (result.value) {
+          _this.$swal('Deleted!', 'Your file has been deleted.', 'success');
+        }
+      });
+    },
+    deleteConfirmAlert: function deleteConfirmAlert() {
+      this.$swal({
+        type: 'warning',
+        title: 'Custom width, padding, background.',
+        width: 600,
+        padding: '3em',
+        background: '#fff url(/images/trees.png)',
+        backdrop: "\n                            rgba(0,0,123,0.4)\n                            url(\"/images/nyan-cat.gif\")\n                            center left\n                            no-repeat\n                          "
+      });
+    },
+    flash: function flash(message) {
+      this.$swal(message);
+    },
+    flashError: function flashError(message) {
+      this.$swal('Error!', message, 'error');
+    },
+    flashSucces: function flashSucces(message) {
+      this.$swal('success!', message, 'success');
+    },
+    showDrawer: function showDrawer(value) {
+      Event.fire('show-drawer', value);
+    },
+    loading: function loading(value) {
+      Event.fire('show-loader', value);
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (alertMixins);
+
+/***/ }),
+
+/***/ "./resources/assets/js/mixins/table-mixins-actions.js":
+/*!************************************************************!*\
+  !*** ./resources/assets/js/mixins/table-mixins-actions.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var TableMixinsActions = {
+  methods: {
+    removeRecord: function removeRecord(url) {
+      var _this = this;
+
+      var refresh = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+      return new Promise(function (resolve, reject) {
+        _this.$swal({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then(function (result) {
+          if (result.value) {
+            Event.fire('show-loader', true);
+            axios.post(url).then(function (response) {
+              Event.fire('show-loader', false);
+              resolve(response);
+
+              _this.$toastr.s("Service deleted successfully ");
+
+              if (refresh) {
+                Event.fire('refresh-data');
+              }
+            })["catch"](function (error) {
+              Event.fire('show-loader', false);
+              reject(error.response);
+
+              _this.$swal('Not Deleted!', 'The record has not been deleted, an error occured', 'error');
+            });
+          }
+        });
+      });
+    },
+    deleteRecord: function deleteRecord(url) {
+      var _this2 = this;
+
+      var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var refresh = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+      return new Promise(function (resolve, reject) {
+        _this2.$swal({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then(function (result) {
+          if (result.value) {
+            Event.fire('show-loader', true);
+            axios["delete"](url, {
+              params: params
+            }).then(function (response) {
+              Event.fire('show-loader', false);
+              resolve(response);
+
+              _this2.$toastr.s("Service deleted successfully ");
+
+              if (refresh) {
+                Event.fire('refresh-data');
+              }
+            })["catch"](function (error) {
+              Event.fire('show-loader', false);
+              reject(error.response);
+
+              _this2.$swal('Not Deleted!', 'The record has not been deleted, an error occured', 'error');
+            });
+          }
+        });
+      });
+    },
+    addRecord: function addRecord(url, formData, serviceName) {
+      var _this3 = this;
+
+      var refresh = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
+      return new Promise(function (resolve, reject) {
+        Event.fire('show-loader', true);
+        axios.post(url, formData).then(function (response) {
+          if (refresh) {
+            Event.fire('refresh-data');
+          }
+
+          resolve(response); // this.flashSucces(serviceName+ " added successfully");
+
+          _this3.$toastr.s(serviceName + " added successfully");
+
+          Event.fire('show-loader', false);
+        })["catch"](function (error) {
+          reject(error.response);
+
+          _this3.flashError(serviceName + " not added" + error);
+        });
+      });
+    },
+    getRecord: function getRecord(url, params, serviceName) {
+      var _this4 = this;
+
+      var refresh = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
+      return new Promise(function (resolve, reject) {
+        Event.fire('show-loader', true);
+        axios.get(url, {
+          params: params
+        }).then(function (response) {
+          if (refresh) {
+            Event.fire('refresh-data');
+          }
+
+          Event.fire('show-loader', false);
+          resolve(response);
+        })["catch"](function (error) {
+          reject(error.response);
+
+          _this4.flashError(serviceName + " not retrieved" + error);
+
+          Event.fire('show-loader', false);
+        });
+      });
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (TableMixinsActions);
+
+/***/ }),
+
+/***/ "./resources/assets/js/mixins/vuetable-2.js":
+/*!**************************************************!*\
+  !*** ./resources/assets/js/mixins/vuetable-2.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var accounting__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! accounting */ "./node_modules/accounting/accounting.js");
+/* harmony import */ var accounting__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(accounting__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _alert_mixins__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./alert-mixins */ "./resources/assets/js/mixins/alert-mixins.js");
+
+
+
+
+var vueTableMixin = {
+  mixins: [_alert_mixins__WEBPACK_IMPORTED_MODULE_3__["default"]],
+  created: function created() {},
+  data: function data() {
+    return {
+      css: {
+        table: {
+          tableClass: ' display mx-auto  table table-striped table-bordered printableArea dataTable',
+          ascendingIcon: 'fa fa-sort-up',
+          descendingIcon: 'fa fa-sort-down'
+        },
+        pagination: {
+          wrapperClass: 'pagination',
+          activeClass: 'active',
+          disabledClass: 'disabled',
+          pageClass: 'page',
+          linkClass: 'link',
+          icons: {
+            first: '',
+            prev: '',
+            next: '',
+            last: ''
+          }
+        },
+        icons: {
+          first: 'glyphicon glyphicon-step-backward',
+          prev: 'glyphicon glyphicon-chevron-left fa fa-angle-left',
+          next: 'glyphicon glyphicon-chevron-right fa fa-angle-right',
+          last: 'glyphicon glyphicon-step-forward'
+        }
+      },
+      promise: true
+    };
+  },
+  methods: {
+    allcap: function allcap(value) {
+      return value.toUpperCase();
+    },
+    genderLabel: function genderLabel(value) {
+      return value === 'M' ? '<span class="label label-success"><i class="glyphicon glyphicon-star"></i> Male</span>' : '<span class="label label-danger"><i class="glyphicon glyphicon-heart"></i> Female</span>';
+    },
+    formatNumber: function formatNumber(value) {
+      return accounting__WEBPACK_IMPORTED_MODULE_1___default.a.formatNumber(value, 2);
+    },
+    formatDate: function formatDate(value) {
+      var fmt = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'D-MMM-YYYY';
+      return value == null ? '' : moment__WEBPACK_IMPORTED_MODULE_2___default()(value, 'YYYY-MM-DD').format(fmt);
+    },
+    onPaginationData: function onPaginationData(paginationData) {
+      this.customPagination = paginationData;
+      this.$refs.pagination.setPaginationData(paginationData);
+      this.$refs.paginationInfo.setPaginationData(paginationData);
+    },
+    onChangePage: function onChangePage(page) {
+      this.$refs.vuetable.changePage(page);
+    },
+    onCellClicked: function onCellClicked(data, field, event) {
+      this.$refs.vuetable.toggleDetailRow(data.id);
+    },
+    loading: function loading() {
+      this.$Progress.start();
+      Event.fire('show-simple-spinner', true);
+    },
+    loaded: function loaded() {
+      this.$Progress.finish();
+      Event.fire('show-simple-spinner', false);
+    },
+    loadError: function loadError(error) {
+      this.$Progress.fail();
+      flash("An error occured");
+      this.$toastr.e(" An error occured" + error);
+      Event.fire('show-simple-spinner', false);
+    }
+  },
+  events: {
+    'filter-set': function filterSet(filterText) {
+      var _this = this;
+
+      this.moreParams = {
+        filter: filterText
+      };
+      vue__WEBPACK_IMPORTED_MODULE_0___default.a.nextTick(function () {
+        return _this.$refs.vuetable.refresh();
+      });
+    },
+    'filter-reset': function filterReset() {
+      var _this2 = this;
+
+      this.moreParams = {};
+      vue__WEBPACK_IMPORTED_MODULE_0___default.a.nextTick(function () {
+        return _this2.$refs.vuetable.refresh();
+      });
+    },
+    'per-page-set': function perPageSet(perPage) {
+      var _this3 = this;
+
+      this.moreParams = {
+        perPage: perPage
+      };
+      vue__WEBPACK_IMPORTED_MODULE_0___default.a.nextTick(function () {
+        return _this3.$refs.vuetable.refresh();
+      });
+    }
+  },
+  mounted: function mounted() {
+    var _this4 = this;
+
+    Event.listen('refresh-data', function () {
+      vue__WEBPACK_IMPORTED_MODULE_0___default.a.nextTick(function () {
+        return _this4.$refs.vuetable.refresh();
+      });
+    });
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (vueTableMixin);
+
+/***/ }),
+
+/***/ "./resources/assets/js/views/JobWorkflow/Index.vue":
+/*!*********************************************************!*\
+  !*** ./resources/assets/js/views/JobWorkflow/Index.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Index_vue_vue_type_template_id_52f952bc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=52f952bc& */ "./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=template&id=52f952bc&");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Index_vue_vue_type_template_id_52f952bc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Index_vue_vue_type_template_id_52f952bc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/assets/js/views/JobWorkflow/Index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=template&id=52f952bc&":
+/*!****************************************************************************************!*\
+  !*** ./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=template&id=52f952bc& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_52f952bc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Index.vue?vue&type=template&id=52f952bc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/assets/js/views/JobWorkflow/Index.vue?vue&type=template&id=52f952bc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_52f952bc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_52f952bc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);
